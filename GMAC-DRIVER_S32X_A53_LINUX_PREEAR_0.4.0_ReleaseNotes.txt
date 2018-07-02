@@ -1,0 +1,58 @@
+****************************************************************************************************
+Release Notes for NXP Semiconductors GMAC driver for Linux swv: 0.4.0 pre-EAR
+
+NXP and the NXP logo are trademarks of NXP Semiconductors.
+
+This driver is released under the terms of BSD-3 license. 
+Full text of the license is available on https://opensource.org/licenses/BSD-3-Clause
+
+All other product or service names are the property of their respective owners.
+Copyright 2018 NXP
+****************************************************************************************************
+This package contains files for NXP Semiconductors GMAC driver for Linux swv: 0.4.0 pre-EAR
+- dwc-eqos sources 0.4.0
+
+========================================================
+Introduction:
+========================================================
+This release contains driver for Linux for GMAC hardware. The driver is in form of kernel module.
+
+========================================================
+Release Location:
+========================================================
+This PRE-EAR 0.4.0 release is stored in the GIT repository location: 
+https://bitbucket.sw.nxp.com/projects/AUTO_ETH/repos/dwc-eqos/browse
+GIT release tag: BLN_GMAC-DRIVER_S32X_A53_LINUX_PREEAR_0.4.0
+
+========================================================
+Release Specifics:
+========================================================
+- This release has PRE-EAR quality status in terms of testing and quality documentation
+- The target device was simulated by VDK (model S32G R5.0.0)
+- The drive was developed under BSP 17.0 (linux-s32 kernel 4.1.26-rt29).
+
+========================================================
+Supported Features:
+========================================================
+- Transmits Ethernet frames from IP stack using the GMAC hardware
+- Receives Ethernet frames to IP stack using the GMAC hardware
+
+========================================================
+Compiler Options:
+========================================================
+Build is done using standard Linux build system
+
+========================================================
+Assumptions:
+========================================================
+No special assumptions or considerations required.
+
+========================================================
+Known Issues and planned features
+========================================================
+No issues known at the time of release.
+
+========================================================
+3rd Party Issues
+========================================================
+No issues known at the time of release.
