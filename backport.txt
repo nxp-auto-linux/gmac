@@ -1,0 +1,46 @@
+original stmmac driver (drivers/net/ethernet/stmicro/stmmac) backported
+from v4.19-rc4 vanilla (git describe: v4.19-rc4-1004-gbab5c80b2110)
+
+1) removed feature from driver:
+
+	* Credit Based Shaper (CBS) qdisc
+	  (added to the newer kernel, see:
+	  https://lists.osuosl.org/pipermail/intel-wired-lan/Week-of-Mon-20170925/010152.html)
+
+	* tc-flower offloading
+	  (fyi: https://lists.osuosl.org/pipermail/intel-wired-lan/Week-of-Mon-20180219/011762.html)
+
+2) cherry-picked commits:
+
+	* 3b8e9238a8d194e82f0202a5fb68a63686ebe420
+	  (http://patchwork.ozlabs.org/patch/771826/)
+	  net: sched: introduce helper to identify gact pass action
+
+3) device tree usage for s32 platform:
+
+	* arch/arm64/boot/dts/freescale/s32-gen1.dtsi:
+
+	gmac0: ethernet@4033c000 {
+		compatible = "fsl,s32cc-dwmac", "fsl,dwc-eqos";
+		reg = <0x0 0x4033c000 0x0 0x2000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 57 4>;
+		interrupt-names = "macirq";
+		clocks = <&sysclk>, <&sysclk>;
+		clock-names = "stmmaceth", "pclk";
+		phy-mode = "gmii";
+		phy-handle = <&phy1>;
+		mdio0 {
+			compatible = "snps,dwmac-mdio";
+			#address-cells = <1>;
+			#size-cells = <0>;
+			phy1: ethernet-phy@1 {
+				reg = <1>;
+			};
+		};
+	};
+
+4) platform code todo:
+
+	* dwmac-s32x.c 
+	  add/fix mdio/phy parameters
