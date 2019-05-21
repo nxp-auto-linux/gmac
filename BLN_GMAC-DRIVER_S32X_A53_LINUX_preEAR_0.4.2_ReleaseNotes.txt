@@ -1,22 +1,21 @@
 ****************************************************************************************************
-Release Notes for NXP Semiconductors GMAC Linux driver swv: 0.4.1 PREEAR
+Release Notes for NXP Semiconductors GMAC Linux driver swv: 0.4.2 preEAR
 
 All product or service names are the property of their respective owners.
 Copyright 2019 NXP
 ****************************************************************************************************
 
-This package contains files for GMAC Linux driver swv: 0.4.1 PREEAR
+This package contains files for GMAC Linux driver swv: 0.4.2 preEAR
 - drivers - folder with sourcecode
-- include - folder with header files
 - doc - folder containing user manual
-- GMAC-DRIVER_S32X_A53_LINUX_PREEAR_0.4.1_ReleaseNotes.txt - this file
+- GMAC-DRIVER_S32X_A53_LINUX_preEAR_0.4.2_ReleaseNotes.txt - this file
 
 ========================================================
 Installation
 ========================================================
 The release should be integrated to the BSP Linux.
 The drivers folder should be placed over the drivers folder in BSP kernel directory
-to replace the original driver. The same should be done with the include folder.
+to to add new files and replaces existing.
 
 ========================================================
 Release Location:
@@ -24,7 +23,7 @@ Release Location:
 
 This release sources are internally stored at location:
 https://bitbucket.sw.nxp.com/projects/AUTO_ETH/repos/stmmac/browse/releases
-GIT release tag: BLN_GMAC-DRIVER_S32X_A53_LINUX_QNX_PREEAR_0.4.1
+GIT release tag: BLN_GMAC-DRIVER_S32X_A53_LINUX_QNX_preEAR_0.4.2
 
 
 ========================================================
@@ -32,8 +31,8 @@ Release Specifics:
 ========================================================
 
 - This release was developed and tested with:
-    - VDK 6.1.1 for S32G
-    - BSP19 linux
+    - VDK 8.0 for S32G
+    - BSP20 linux with kernel 4.19
 
 ========================================================
 Supported Features:
@@ -51,18 +50,17 @@ N/A
 Directory Structure:
 ========================================================
 
-This package contains files for GMAC Linux driver swv: PREEAR 0.4.1
+This package contains files for GMAC Linux driver swv: 0.4.2 preEAR
 - drivers - folder with sourcecode
-- include - folder with header files
 - doc - folder containing user manual
-- GMAC-DRIVER_S32X_A53_LINUX_PREEAR_0.4.1_ReleaseNotes.txt - this file
+- GMAC-DRIVER_S32X_A53_LINUX_preEAR_0.4.2_ReleaseNotes.txt - this file
 
 ========================================================
 Compiler Options:
 ========================================================
-Driver should be build by Linux standard makefiles
-It was developed with gcc-linaro-6.3-r2017.02 toolchain
-  
+Driver should be build by Linux standard makefiles.
+It was developed with GCC Linaro 6.3.1 toolchain
+ 
 ========================================================
 Assumptions:
 ========================================================
@@ -73,15 +71,13 @@ No special assumptions or considerations required.
 Known Issues and planned features
 ========================================================
 
-
 ========================================================
 3rd Party Issues
 ========================================================
-Occassional kernel crash when running the Linux on multiple cores.
-VHub utility is crushing with lot of network traffic(VHub 1.7).
+VHub utility is crashing with lot of network traffic (VDK8.0 default VHub version)
 
 ========================================================
-What's Modified PREEAR_0.4.1
+What's Modified preEAR_0.4.2
 ========================================================
 
 

@@ -1,12 +1,12 @@
 NXP Software Content Register
 
-Release Name:     GMAC-DRIVER_S32X_A53_LINUX_PRE-EAR_0.4.1
+Release Name:     GMAC-DRIVER_S32X_A53_LINUX_PRE-EAR_0.4.2
 
 Outgoing License: GNU GPLv2
 
 Package: GMAC-DRIVER_S32X_A53_LINUX
     Description:        Linux driver for CC GMAC
-    Version:            PRE-EAR 0.4.1
+    Version:            PRE-EAR 0.4.2
     License:            GNU GPLv2
     Format:             Linux driver source code
     Release Location:   Flexera
